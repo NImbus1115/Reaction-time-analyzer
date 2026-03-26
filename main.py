@@ -2,7 +2,7 @@ import tkinter as tk
 import time
 import random
 import statistics
-import matplotlib.pyplot as plt   # 🆕 NEW (for graph)
+import matplotlib.pyplot as plt   
 
 # ---- SETUP WINDOW ----
 root = tk.Tk()
@@ -71,11 +71,11 @@ def show_results():
 
     # Fatigue / Adaptation
     if reaction_times[-1] > reaction_times[0]:
-        trend = "⚠️ Fatigue detected"
+        trend = "Fatigue detected"
     elif reaction_times[-1] < reaction_times[0]:
-        trend = "✅ Adaptation detected"
+        trend = "Adaptation detected"
     else:
-        trend = "➡️ No clear trend"
+        trend = "No clear trend"
 
     label.config(
         text=f"Average: {avg:.3f} sec\n"
@@ -84,11 +84,10 @@ def show_results():
              f"Showing graph..."
     )
 
-    root.after(2000, show_graph)   # 🆕 NEW
+    root.after(2000, show_graph)   
 
-# ---- GRAPH FUNCTION (NEW FEATURE) ----
 def show_graph():
-    root.destroy()  # close GUI window
+    root.destroy() 
 
     plt.plot(reaction_times, marker='o')
     plt.title("Reaction Time Over Trials")
@@ -97,7 +96,7 @@ def show_graph():
     plt.grid()
     plt.show()
 
-    memory_test()  # continue to memory test
+    memory_test()  
 
 # ---- MEMORY TEST ----
 def memory_test():
