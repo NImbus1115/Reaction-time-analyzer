@@ -1,48 +1,46 @@
-# 🧠 Reaction Time Analyzer
+# 🧠 Cognitive Reaction Time Experiment (GUI-Based)
 
-A Python-based cognitive neuroscience project that measures and compares human reaction times, providing insights into attention, processing speed, and behavioral performance through data visualization.
+A Python-based interactive cognitive experiment that measures human reaction time under dual-task conditions, while analyzing performance trends such as fatigue, adaptation, and response variability.
 
 ---
 
 ## 🚀 Features
 
-* ⏱️ Measures human reaction time using stimulus-response method
-* 👥 Supports two users for comparative analysis
-* 📊 Generates:
+* 🖥️ Full-screen GUI-based experimental interface (Tkinter)
+* ⏱️ Real-time reaction time measurement using keyboard input
+* 🧠 Dual-task paradigm:
 
-  * Trial-wise reaction time graph
-  * Average reaction time comparison
-* 🎯 Simulates real cognitive psychology experiments
+  * React to stimulus (SPACE key)
+  * Memorize numbers simultaneously
+* 📊 Performance analysis:
+
+  * Average reaction time
+  * Variability (standard deviation)
+  * Fatigue vs adaptation detection
+* 📈 Graph visualization of reaction time across trials
 
 ---
 
 ## 🧠 Concept
 
-Reaction time is an important measure in cognitive science and neuroscience.
-It reflects how quickly the brain processes a stimulus and produces a response.
+Reaction time is a key behavioral measure used to study how quickly the brain processes stimuli and generates responses.
 
-This project simulates a basic experimental setup used in:
+This project implements a **simplified experimental paradigm** that demonstrates:
 
-* Cognitive psychology labs
-* Attention and focus studies
-* Behavioral neuroscience
+* Stimulus-response timing
+* Dual-task interference (reaction + memory load)
+* Performance trends across trials (fatigue or learning effects)
+
+While not a laboratory-grade system, this project provides a **conceptual and computational model** of how cognitive experiments can be structured, executed, and analyzed.
 
 ---
 
 ## 💻 Technologies Used
 
 * Python
-* Matplotlib (for data visualization)
-* Time & Random modules (for simulation)
-
----
-
-## 📂 Project Structure
-
-reaction-time-analyzer/
-│── main.py
-│── README.md
-│── .gitignore
+* Tkinter (GUI interface)
+* Matplotlib (data visualization)
+* Time, Random, Statistics modules
 
 ---
 
@@ -54,26 +52,25 @@ reaction-time-analyzer/
 git clone https://github.com/NImbus1115/Reaction-time-analyzer.git
 ```
 
-2. Navigate to the folder:
+2. Navigate to the project folder:
 
 ```bash
 cd Reaction-time-analyzer
 ```
 
-3. Create virtual environment:
+3. (Optional but recommended) Activate virtual environment:
 
 ```bash
-python3 -m venv venv
 source venv/bin/activate
 ```
 
-4. Install dependencies:
+4. Install required libraries:
 
 ```bash
 pip install matplotlib
 ```
 
-5. Run the project:
+5. Run the program:
 
 ```bash
 python3 main.py
@@ -81,32 +78,45 @@ python3 main.py
 
 ---
 
+## 🧪 Experimental Flow
+
+1. Press **ENTER** to start the experiment
+2. A number appears (to be memorized)
+3. After a delay, stimulus appears ("CLICK NOW")
+4. Press **SPACE** as quickly as possible
+5. Repeat for multiple trials
+6. View performance analysis and graph
+7. Recall memory task in terminal
+
+---
+
 ## 📊 Output
 
-* Reaction time displayed for each trial
-* Average reaction time for each user
-* Graphs showing:
-
-  * Performance over trials
-  * Comparison between users
+* Reaction time for each trial
+* Average response time
+* Variability (consistency of responses)
+* Fatigue or adaptation trend
+* Graph showing performance over trials
+* Memory recall score
 
 ---
 
 ## 🎯 Applications
 
-* Cognitive performance testing
-* Attention and focus analysis
-* Human-computer interaction studies
-* Educational neuroscience demonstrations
+* Educational demonstration of cognitive experiments
+* Understanding attention and cognitive load
+* Introduction to behavioral data analysis
+* Basic simulation of experimental design in cognitive science
 
 ---
 
-## 🔥 Future Improvements
+## 🔮 Future Improvements
 
-* 💾 Save results to CSV file
-* 🖥️ GUI-based interface
-* 🔊 Sound-based stimulus
-* 📈 Advanced statistical analysis
+* Fully GUI-based memory test (remove terminal input)
+* Multi-user comparison
+* Data export (CSV for analysis)
+* Enhanced experimental conditions (visual vs auditory stimuli)
+* Real-time plotting
 
 ---
 
@@ -116,6 +126,16 @@ python3 main.py
 
 ---
 
-## ⭐ Acknowledgment
+## ⭐ Note
 
-This project was developed as part of learning computational approaches in cognitive science and neuroscience.
+This project is intended as a learning and demonstration tool for understanding how cognitive experiments can be implemented computationally using Python.
+
+
+
+
+
+
+
+
+
+
